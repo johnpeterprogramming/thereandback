@@ -10,3 +10,5 @@ tile_data = PoolIntArray( -327692, 0, 65537, -327691, 0, 65537, -327690, 0, 6553
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 31.3619, 91.1771 )
+
+[node name="CheckPoints" type="Node2D" parent="."]
