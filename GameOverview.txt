@@ -1,0 +1,32 @@
+CORE IDEA:
+Trap based top down dungeon crawler
+
+
+What we want:
+Player character
+Environment
+Good selection of traps
+- rotating blades
+- pressure based spikes
+- spiked Wrecking balls swinging side to side
+- Pressure plates (active different machanisms)
+	- arrow shooting
+	- hole opening
+
+
+Enemies
+- die from being led into traps
+- bats
+- skeleton
+	- ranged
+	- melee
+
+
+Movement:
+- WASD/ARROW
+- Dash - shift key
+
+
+
+
+
