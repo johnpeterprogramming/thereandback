@@ -9,8 +9,10 @@ var motion = Vector2()  # The player's movement vector.
 var dir = Vector2() #input direction
 var state
 var can_dash = true
+var respawn_point
 
 func _ready():
+	respawn_point = position
 	$DashCoolDown.wait_time = DASHCOOLDOWN
 
 func _process(delta):
@@ -45,6 +47,8 @@ func dash():
 		can_dash = false
 		$DashCoolDown.start()
 
+func die():
+	position = respawn_point
 
 func _on_DashCoolDown_timeout():
 	can_dash = true
