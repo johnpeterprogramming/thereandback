@@ -87,3 +87,4 @@ margin_bottom = 128.0
 texture = ExtResource( 6 )
 
 [node name="FadeIn" parent="." instance=ExtResource( 7 )]
+visible = false

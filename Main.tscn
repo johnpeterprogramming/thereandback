@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Environment/Walls and floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Environment/Coin.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 
@@ -12,3 +13,6 @@ tile_data = PoolIntArray( -327692, 0, 65537, -327691, 0, 65537, -327690, 0, 6553
 position = Vector2( 31.3619, 91.1771 )
 
 [node name="CheckPoints" type="Node2D" parent="."]
+
+[node name="Coin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 118.044, 96.2172 )

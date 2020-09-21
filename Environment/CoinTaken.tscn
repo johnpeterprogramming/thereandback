@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://OptionFont15.tres" type="DynamicFont" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3.99426, -3.99426 ), Vector2( -3.994, -20 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="CoinTaken" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/start = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -3.994
+margin_top = -20.0
+margin_right = 36.006
+margin_bottom = -6.0
+custom_fonts/font = ExtResource( 1 )
+text = "+1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
