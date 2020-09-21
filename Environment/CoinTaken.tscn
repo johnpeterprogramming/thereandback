@@ -4,7 +4,6 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "start"
-length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
 tracks/0/interp = 1
@@ -12,10 +11,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -3.99426, -3.99426 ), Vector2( -3.994, -20 ) ]
+"values": [ Vector2( -3.99426, -3.99426 ), Vector2( -3.994, -40 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -24,12 +23,24 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.4 ),
+"times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "queue_free"
 } ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="CoinTaken" type="Node2D"]
@@ -39,10 +50,11 @@ autoplay = "start"
 anims/start = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -3.994
-margin_top = -20.0
+margin_top = -40.0
 margin_right = 36.006
-margin_bottom = -6.0
+margin_bottom = -26.0
 custom_fonts/font = ExtResource( 1 )
 text = "+1"
 __meta__ = {
