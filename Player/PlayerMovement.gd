@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const DASHFORCE = 600
-const MOVESPEED = 30
+const MOVESPEED = 25
 const FRICTION = 0.8
 const DASHCOOLDOWN = 2
 
