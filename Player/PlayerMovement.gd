@@ -31,6 +31,16 @@ func manage_dir():
 		dir.y += 1
 	if Input.is_action_pressed("Up"):
 		dir.y -= 1
+	if dir.y == 1:
+		$AnimatedSprite.animation = "WalkS"
+	elif dir.y == -1:
+		$AnimatedSprite.animation = "WalkW"
+	elif dir.x == 1:
+		$AnimatedSprite.animation = "WalkD"
+	elif dir.x == -1:
+		$AnimatedSprite.animation = "WalkA"
+	else:
+		$AnimatedSprite.animation = "Idle" + $AnimatedSprite.animation.right(4)
 	dir = dir.normalized()
 
 func move():
