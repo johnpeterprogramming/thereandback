@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Environment/Walls and floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Environment/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://buttons/RotatingTrap.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node2D"]
 
@@ -16,4 +17,11 @@ collision_mask = 30
 [node name="CheckPoints" type="Node2D" parent="."]
 
 [node name="Coin" parent="." instance=ExtResource( 3 )]
+<<<<<<< HEAD
 position = Vector2( 118.044, 96.2172 )
+=======
+position = Vector2( 150.614, 91.217 )
+
+[node name="RotatingTrap" parent="." instance=ExtResource( 4 )]
+position = Vector2( 193.063, 87.552 )
+>>>>>>> 014df70fbf346242455162b983d0fffeb88e6481
