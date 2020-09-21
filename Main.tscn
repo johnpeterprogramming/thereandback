@@ -17,11 +17,7 @@ collision_mask = 30
 [node name="CheckPoints" type="Node2D" parent="."]
 
 [node name="Coin" parent="." instance=ExtResource( 3 )]
-<<<<<<< HEAD
 position = Vector2( 118.044, 96.2172 )
-=======
-position = Vector2( 150.614, 91.217 )
 
 [node name="RotatingTrap" parent="." instance=ExtResource( 4 )]
-position = Vector2( 193.063, 87.552 )
->>>>>>> 014df70fbf346242455162b983d0fffeb88e6481
+position = Vector2( 220.451, 102.127 )
