@@ -10,16 +10,19 @@ var dir = Vector2() #input direction
 var state
 var can_dash = true
 var respawn_point
+var falling
 
 func _ready():
+	falling = false
 	respawn_point = position
 	$DashCoolDown.wait_time = DASHCOOLDOWN
 
 func _process(delta):
 	manage_dir()
 	add_forces()
-	move()
-	dash()
+	if not falling:
+		move()
+		dash()
 
 func manage_dir():
 	dir = Vector2.ZERO
@@ -57,8 +60,13 @@ func dash():
 		can_dash = false
 		$DashCoolDown.start()
 
+func fall(): #When he falls and dies
+	falling = true
+	$AnimationPlayer.play("Fall") 
+	
 func die():
 	position = respawn_point
+	falling = false
 
 func _on_DashCoolDown_timeout():
 	can_dash = true
