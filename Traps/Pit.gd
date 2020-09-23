@@ -6,7 +6,7 @@ var body_name
 func _ready():
 	timer = $Timer
 
-func _process(delta):
+func _process(_delta):
 	print($Timer.time_left)
 
 func _on_Area2D_body_entered(body):

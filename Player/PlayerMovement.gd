@@ -48,7 +48,7 @@ func manage_dir():
 
 func move():
 	motion += dir * MOVESPEED
-	move_and_slide(motion)
+	motion = move_and_slide(motion)
 
 func add_forces(delta):
 	if falling:
