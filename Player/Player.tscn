@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Player/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://Assets/gfx/character.png" type="Texture" id=2]
@@ -130,36 +130,6 @@ animations = [ {
 radius = 5.91624
 height = 4.00416
 
-[sub_resource type="Animation" id=23]
-resource_name = "Fall"
-length = 1.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 1.1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "die"
-} ]
-}
-
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
 script = ExtResource( 1 )
@@ -179,7 +149,4 @@ one_shot = true
 current = true
 smoothing_enabled = true
 smoothing_speed = 20.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fall = SubResource( 23 )
 [connection signal="timeout" from="DashCoolDown" to="." method="_on_DashCoolDown_timeout"]

@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 const DASHFORCE = 600
 const MOVESPEED = 25
-const FRICTION = 0.8
 const DASHCOOLDOWN = 2
 
+var friction = 0.800
 var motion = Vector2()  # The player's movement vector.
 var dir = Vector2() #input direction
 var state
@@ -19,10 +19,10 @@ func _ready():
 
 func _process(delta):
 	manage_dir()
-	add_forces()
-	if not falling:
-		move()
-		dash()
+	add_forces(delta)
+	
+	move()
+	dash()
 
 func manage_dir():
 	dir = Vector2.ZERO
@@ -50,8 +50,14 @@ func move():
 	motion += dir * MOVESPEED
 	move_and_slide(motion)
 
-func add_forces():
-	motion *= FRICTION #friction
+func add_forces(delta):
+	if falling:
+		friction = 0.4
+		modulate.a -= delta
+	else:
+		friction = 0.8
+		modulate.a = clamp(modulate.a+delta, 0, 1)
+	motion *= friction #friction
 
 func dash():
 	if Input.is_action_just_pressed("Dash") and can_dash:
@@ -60,13 +66,9 @@ func dash():
 		can_dash = false
 		$DashCoolDown.start()
 
-func fall(): #When he falls and dies
-	falling = true
-	$AnimationPlayer.play("Fall") 
-	
 func die():
 	position = respawn_point
-	falling = false
+	modulate.a = 1
 
 func _on_DashCoolDown_timeout():
 	can_dash = true
