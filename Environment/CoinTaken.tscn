@@ -50,11 +50,10 @@ autoplay = "start"
 anims/start = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -3.994
-margin_top = -40.0
-margin_right = 36.006
-margin_bottom = -26.0
+margin_left = -3.99426
+margin_top = -3.99426
+margin_right = 36.0057
+margin_bottom = 10.0057
 custom_fonts/font = ExtResource( 1 )
 text = "+1"
 __meta__ = {
