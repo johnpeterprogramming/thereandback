@@ -3,11 +3,12 @@ extends CanvasLayer
 
 onready var animation_player = $AnimationPlayer
 onready var black = $Control/Black
+var current_meme : String
 
 func change_scene(scene, meme='', delay=5):
 	$Control.show()
 	if meme:
-		Singelton.current_meme = meme
+		current_meme = meme
 		fade_in_and_out("res://Memes/EndMeme.tscn")
 		yield(get_tree().create_timer(delay), "timeout")
 		
