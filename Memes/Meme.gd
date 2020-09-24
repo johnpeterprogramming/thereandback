@@ -1,6 +1,6 @@
 extends Area2D
 
-var deathScene = preload("res://Environment/MemeTaken.tscn")
+var deathScene = preload("res://Memes/MemeTaken.tscn")
 
 
 func _on_Coin_body_entered(_body):

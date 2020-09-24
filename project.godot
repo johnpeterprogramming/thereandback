@@ -16,11 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="ThereAndBack"
-run/main_scene="res://TitleScreen.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
+SceneChanger="*res://SceneChanger.tscn"
 Singelton="*res://Singelton.gd"
 
 [display]
