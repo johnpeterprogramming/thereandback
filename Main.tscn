@@ -1,43 +1,132 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://End.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Traps/PushingTrap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Traps/RotatingTrap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tiles/TileMap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Traps/Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Memes/Meme.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Main.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Fonts/Robotto/Roboto-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Traps/RotatingTrap.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 9 )
 
 [node name="Tutorial" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="TileMap" parent="." instance=ExtResource( 4 )]
+position = Vector2( 15.2173, 92.9905 )
+tile_data = PoolIntArray( -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 2, 0, -196606, 2, 0, -196605, 2, 0, -196604, 2, 0, -196603, 2, 0, -196602, 2, 0, -65538, 2, 0, -65537, 0, 0, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 2, -131066, 2, 0, -2, 2, 0, -1, 0, 65536, -65536, 0, 65537, -65535, 0, 65537, -65534, 0, 65537, -65533, 0, 65537, -65532, 0, 65537, -65531, 0, 65538, -65530, 2, 0, 65534, 2, 0, 65535, 0, 131072, 0, 0, 131073, 1, 0, 131073, 2, 0, 131073, 3, 0, 131073, 4, 0, 131073, 5, 0, 131073, 6, 2, 0, 131070, 2, 0, 131071, 2, 0, 65536, 2, 0, 65537, 2, 0, 65538, 2, 0, 65539, 2, 0, 65540, 2, 0, 65541, 2, 0, 65542, 2, 0 )
+
+[node name="GUI" parent="." instance=ExtResource( 7 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 10.1719, 89.6269 )
+position = Vector2( 15.2173, 92.9905 )
 collision_mask = 30
 
 [node name="End" parent="." instance=ExtResource( 2 )]
-next_scene = "res://ExamplsScene.tscn"
-meme_collected = "res://Memes/oogabooga.jpeg"
-min_memes = 5
-
-[node name="Spikes" parent="." instance=ExtResource( 5 )]
-position = Vector2( 140.418, 133.948 )
-
-[node name="RotatingTrap" parent="." instance=ExtResource( 4 )]
-position = Vector2( -85.582, 145.948 )
-
-[node name="PushingTrap" parent="." instance=ExtResource( 3 )]
-position = Vector2( 136.418, 33.9478 )
+position = Vector2( -14.6329, 64.2347 )
+rotation = 1.5708
+next_scene = "res://level2.tscn"
+meme_collected = "res://Memes/barber.jpeg"
+min_memes = 1
 
 [node name="Meme" parent="." instance=ExtResource( 6 )]
-position = Vector2( -29.8584, 65.1862 )
+position = Vector2( 274.822, 70.5099 )
 
 [node name="Meme2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -5.80409, 57.1681 )
+position = Vector2( 148.609, 385.058 )
 
 [node name="Meme3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 78.8313, 108.84 )
+position = Vector2( 86.7701, 323.219 )
 
 [node name="Meme4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 36.0681, 156.949 )
+position = Vector2( 67.7429, 320.841 )
 
 [node name="Meme5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 55.6679, 67.8589 )
+position = Vector2( 120.068, 318.462 )
+
+[node name="Meme6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 77.2565, 387.436 )
+
+[node name="Meme7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 106.987, 388.626 )
+
+[node name="Meme8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 43.9587, 370.788 )
+
+[node name="Meme9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10.6609, 345.814 )
+
+[node name="Meme10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 57.0399, 345.814 )
+
+[node name="Meme11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 173.582, 349.382 )
+
+[node name="Meme12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 136.717, 349.382 )
+
+[node name="Meme13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 111.743, 345.814 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -6.94385
+margin_top = 13.653
+margin_right = 369.056
+margin_bottom = 83.653
+custom_fonts/font = SubResource( 1 )
+text = "Collect all the memes in the level and bring them back to look at them!(They are bad)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PushingTrap" parent="." instance=ExtResource( 3 )]
+position = Vector2( 53.7346, 562.516 )
+
+[node name="PushingTrap2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 37.3556, 488.18 )
+
+[node name="PushingTrap3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -76.0373, 576.375 )
+
+[node name="RotatingTrap" parent="." instance=ExtResource( 10 )]
+position = Vector2( 252.802, 547.397 )
+
+[node name="RotatingTrap2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 295.64, 687.248 )
+
+[node name="RotatingTrap3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 154.528, 677.169 )
+
+[node name="RotatingTrap4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 41.1355, 653.23 )
+rotation = 0.785397
+
+[node name="Spikes" parent="." instance=ExtResource( 5 )]
+position = Vector2( 406.513, 570.075 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 449.35, 673.389 )
+rotation = -0.634517
+
+[node name="Spikes3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 543.844, 596.534 )
+rotation = -0.634517
+[connection signal="meme_changed" from="Meme" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme2" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme3" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme4" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme5" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme6" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme7" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme8" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme9" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme10" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme11" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme12" to="." method="_on_Meme_meme_changed"]
+[connection signal="meme_changed" from="Meme13" to="." method="_on_Meme_meme_changed"]

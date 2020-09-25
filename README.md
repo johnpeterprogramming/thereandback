@@ -17,4 +17,7 @@ play
 credits
 quit
 
+#UI
+memes collected(se dat jy mag terug gaan na jy almal collect het)
+
 

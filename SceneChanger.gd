@@ -7,6 +7,9 @@ onready var black = $Control/Black
 var current_meme : String
 var memes_collected = 0
 
+func _ready():
+	$Control.hide()
+	
 
 func change_scene(scene, meme='', delay=5):
 	$Control.show()
@@ -23,5 +26,3 @@ func fade_in_and_out(scene):
 	get_tree().change_scene(scene)
 	animation_player.play_backwards("fade")
 
-func _ready():
-	$Control.hide()
