@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Fonts/Lato/Lato-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Memes/Meme.tscn" type="PackedScene" id=3]
+[ext_resource path="res://End.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -18,3 +21,14 @@ text = "Next Scene"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140.638, 129.311 )
+
+[node name="Meme" parent="." instance=ExtResource( 3 )]
+position = Vector2( 245.138, 135.311 )
+
+[node name="End" parent="." instance=ExtResource( 4 )]
+position = Vector2( -43.438, 138.79 )
+next_scene = "res://TitleScreen.tscn"
+meme_collected = "res://Tiles/hyptosis_tile-art-batch-3.png"

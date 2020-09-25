@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/escape.png-33065413cc95beb2d631ac818a63d004.stex"
+path="res://.import/background.png-56292e49c8c55831c4d7f08a8986090f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/escape.png"
-dest_files=[ "res://.import/escape.png-33065413cc95beb2d631ac818a63d004.stex" ]
+source_file="res://Assets/Other/background.png"
+dest_files=[ "res://.import/background.png-56292e49c8c55831c4d7f08a8986090f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

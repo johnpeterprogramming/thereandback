@@ -3,7 +3,10 @@ extends CanvasLayer
 
 onready var animation_player = $AnimationPlayer
 onready var black = $Control/Black
+
 var current_meme : String
+var memes_collected = 0
+
 
 func change_scene(scene, meme='', delay=5):
 	$Control.show()

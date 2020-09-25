@@ -11,11 +11,13 @@ var state # not used btw
 var can_dash = true
 var respawn_point
 var may_move
+var level_won
 
 var animated_sprite
 var animation_player
 
 func _ready():
+	level_won = false
 	may_move = true
 	respawn_point = position
 	animated_sprite = $AnimatedSprite
